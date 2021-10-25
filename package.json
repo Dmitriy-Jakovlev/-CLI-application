@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-homework-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitriy-Jakovlev/nodejs-homework-01.git"
+  },
+  "keywords": [],
+  "author": "Dmitriy Jakovlev <dimas39690023@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitriy-Jakovlev/nodejs-homework-01/issues"
+  },
+  "homepage": "https://github.com/Dmitriy-Jakovlev/nodejs-homework-01#readme",
+  "dependencies": {
+    "commander": "^8.3.0",
+    "nodemon": "^2.0.14",
+    "shortid": "^2.2.16"
+  }
+}
