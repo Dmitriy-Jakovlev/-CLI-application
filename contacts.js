@@ -43,13 +43,16 @@ async function getContactById(contactId) {
 async function removeContact(contactId) {
   try {
     const contacts = await listContacts();
+    const index = contacts.findIndex((item) => item.id == contactId);
+    if (index === -1) {
+      throw new Error("Incorrect ID");
+    }
 
     const filteredContacts = contacts.filter(
       (contact) => contact.id != contactId
     );
     await updateContacts(filteredContacts);
-    const result = await listContacts();
-    return result;
+    return listContacts();
   } catch (error) {
     console.log(error);
   }

@@ -1,4 +1,5 @@
-const fs = require("fs");
+const { Command } = require("commander");
+
 const {
   listContacts,
   getContactById,
@@ -6,7 +7,6 @@ const {
   addContact,
 } = require("./contacts");
 
-const { Command } = require("commander");
 const program = new Command();
 program
   .option("-a, --action <type>", "choose action")
@@ -43,7 +43,6 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       // ... id
       const removeContactResult = await removeContact(id);
       console.table(removeContactResult);
-      // console.table(await listContacts());
       break;
 
     default:
